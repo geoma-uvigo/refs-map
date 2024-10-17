@@ -54,7 +54,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[39.325622289427706,-14.09508327868595],[44.83442459230172,-1.508897749228331]]);
+        }).fitBounds([[39.67955012625641,-14.818894301654149],[45.15388817081045,-2.159745991669874]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -137,8 +137,6 @@
 
         bounds_group.addLayer(layer_GEOMARefs_1);
         cluster_GEOMARefs_1.addTo(map);
-        var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/GEOMARefs_1.png" /> GEOMA Refs.': cluster_GEOMARefs_1,"Google Earth": layer_GoogleEarth_0,},{collapsed:false}).addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
             layer: cluster_GEOMARefs_1,
